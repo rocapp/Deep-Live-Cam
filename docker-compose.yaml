@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  deep-live-cam:
+    build: .
+    container_name: deep_live_cam
+    volumes:
+      - ./models:/app/models  # Mount the models directory
+    ports:
+      - "8000:8000"  # Map the container port to the host
+    environment:
+      - EXECUTION_PROVIDER=cpu  # Example environment variable
+    command: python run.py --execution-provider cpu
