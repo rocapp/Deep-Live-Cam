@@ -66,7 +66,7 @@ python -m venv venv
 source venv/bin/activate
 
 echo "Installing required Python packages..."
-pip install --upgrade pip
+pip install --upgrade pip setuptools
 pip install -r requirements.txt
 
 echo "Setup complete. You can now run the application."
